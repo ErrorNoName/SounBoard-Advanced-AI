@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/electron/electron)
 
-[📥 Télécharger](#installation) • [🚀 Fonctionnalités](#fonctionnalités) • [📖 Documentation](#utilisation) • [🔮 Roadmap](#roadmap)
+[📥 Télécharger](https://github.com/ErrorNoName/SounBoard-Advanced-AI/releases/tag/SoundBoardAi) • [🚀 Fonctionnalités](#fonctionnalités) • [📖 Documentation](#utilisation) • [🔮 Roadmap](#roadmap)
 
 </div>
 
