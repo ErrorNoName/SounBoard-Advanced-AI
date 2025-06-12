@@ -1,153 +1,281 @@
-# 🎵 AI SoundBoard - MyInstants API Reverse
+# 🎵 AI SoundBoard - MyInstants Reverse API
 
-Une application Electron moderne qui permet de rechercher et jouer des sons depuis MyInstants avec une interface transparente sur le côté droit de votre écran.
+<div align="center">
+
+**Une application Electron révolutionnaire qui transforme votre écran en soundboard intelligent**
+
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](package.json)
+[![Electron](https://img.shields.io/badge/Electron-28.0.0-9feaf9.svg)](https://electronjs.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/electron/electron)
+
+[📥 Télécharger](#installation) • [🚀 Fonctionnalités](#fonctionnalités) • [📖 Documentation](#utilisation) • [🔮 Roadmap](#roadmap)
+
+</div>
+
+---
+
+## ✨ Présentation
+
+AI SoundBoard est une application desktop innovante qui révolutionne l'expérience des soundboards. Positionnée discrètement sur le côté droit de votre écran comme une barre des tâches transparente, elle vous donne un accès instantané à des milliers de sons depuis MyInstants.com.
+
+### 🎯 Points Forts
+
+- 🌐 **API Reverse en Temps Réel** - Scraping intelligent de MyInstants.com
+- 👻 **Interface Transparente** - Se fond parfaitement dans votre environnement
+- ⚡ **Performance Optimisée** - Cache intelligent et lecture instantanée
+- 🎨 **Design Moderne** - Interface dark élégante et intuitive
+- 📱 **Position Intelligente** - Collée sur le côté droit comme une taskbar
+- 🔍 **Recherche Avancée** - Algorithme de recherche flou avec Fuse.js
+
+---
 
 ## 🚀 Fonctionnalités
 
-- **API Reverse en temps réel** : Recherche directement sur MyInstants.com
-- **Interface transparente** : Fenêtre sans bordures qui s'affiche sur le côté droit de l'écran
-- **Recherche intelligente** : Tapez votre recherche et obtenez les résultats instantanément
-- **Cache automatique** : Les sons sont mis en cache temporairement pour une lecture plus fluide
-- **Sons populaires** : Affichage des sons tendance au démarrage
-- **Son aléatoire** : Fonction pour jouer un son au hasard
-- **Interface moderne** : Design sombre avec effets visuels
+### 🎵 Gestion Audio
+- **Lecture Instantanée** - Clic pour jouer immédiatement
+- **Cache Intelligent** - Téléchargement automatique pour une lecture fluide
+- **Gestion des Conflits** - Système d'ID unique pour éviter les erreurs de lecture
+- **Contrôles Audio** - Boutons play/pause intégrés
 
-## 📋 Prérequis
+### 🔍 Recherche et Navigation
+- **Recherche en Temps Réel** - Résultats instantanés pendant la frappe
+- **Sons Tendances** - Accès aux sons populaires du moment
+- **Sons Aléatoires** - Découverte de nouveaux contenus
+- **Recherche Floue** - Trouve les sons même avec des fautes de frappe
 
-- Node.js (version 14 ou plus récente)
-- npm
-- Connexion Internet pour accéder à MyInstants
+### 🎨 Interface Utilisateur
+- **Design Transparent** - Interface qui se fond dans le desktop
+- **Mode Sombre** - Thème élégant pour tous les environnements
+- **Responsive** - S'adapte à tous les écrans
+- **Always on Top** - Reste accessible au-dessus des autres fenêtres
 
-## 🛠️ Installation
+---
 
-1. **Cloner ou télécharger le projet**
-   ```bash
-   cd ai-soundboard
-   ```
+## 📥 Installation
 
-2. **Installer les dépendances**
-   ```bash
-   npm install
-   ```
-
-3. **Lancer l'application**
-   ```bash
-   npm start
-   ```
-
-## 🎮 Utilisation
-
-### Interface principale
-
-L'application s'affiche sous forme d'une barre verticale transparente sur le côté droit de votre écran avec :
-
-- **Zone de recherche** : Tapez votre mot-clé pour rechercher des sons
-- **Boutons de contrôle** :
-  - 🔍 Lancer une recherche
-  - 🎲 Son aléatoire
-  - 🔄 Actualiser (retour aux tendances)
-  - ❌ Fermer l'application
-
-### Recherche de sons
-
-1. **Recherche par mot-clé** : Tapez dans la zone de recherche (ex: "salut", "meme", "bruh")
-2. **Recherche automatique** : La recherche se lance automatiquement après 300ms
-3. **Validation** : Appuyez sur Entrée pour valider votre recherche
-
-### Lecture de sons
-
-- **Clic simple** : Cliquez sur un son pour le jouer
-- **Animation** : Le son en cours de lecture est mis en surbrillance avec une animation
-- **Cache automatique** : Les sons sont téléchargés et mis en cache pour une lecture plus rapide
-
-### Raccourcis clavier
-
-- **Echap** : Arrêter le son en cours
-- **F5** : Actualiser et retourner aux tendances
-- **/** : Focus sur la zone de recherche
-
-## 🔧 Architecture technique
-
-### API Reverse
-
-L'application utilise une API Express qui fait du scraping en temps réel sur MyInstants :
-
-- **Recherche** : `GET /api/search/:query`
-- **Tendances** : `GET /api/trending`
-- **Cache** : `GET /api/cached/:id`
-- **Téléchargement** : `GET /api/sound/:id/download`
-
-### Parsing HTML
-
-L'API parse le HTML de MyInstants pour extraire :
-- Nom des sons
-- URLs des fichiers MP3
-- Liens vers les pages d'instant
-- Métadonnées des sons
-
-### Cache temporaire
-
-- Les sons sont mis en cache dans le dossier temporaire système
-- Nettoyage automatique après 1 heure
-- Améliore la performance de lecture
-
-## 📁 Structure du projet
-
-```
-├── main.js              # Application Electron principale avec API
-├── index.html           # Interface utilisateur
-├── styles.css           # Styles CSS transparents
-├── script.js            # Logique côté client
-├── package.json         # Configuration npm
-└── README.md           # Documentation
+### Option 1: Exécutable Portable
+```bash
+# Téléchargez AI-SoundBoard-Portable.exe
+# Double-cliquez pour lancer directement
 ```
 
-## 🎨 Personnalisation
+### Option 2: Installateur Windows
+```bash
+# Téléchargez AI SoundBoard Setup 1.0.0.exe
+# Suivez l'assistant d'installation
+```
 
-### Apparence
+### Option 3: Depuis les Sources
+```bash
+git clone https://github.com/votre-username/ai-soundboard.git
+cd ai-soundboard
+npm install
+npm start
+```
 
-Modifiez `styles.css` pour personnaliser :
-- Couleurs et transparence
-- Position de la fenêtre
-- Animations et effets
+---
 
-### Position de la fenêtre
+## 🛠️ Build depuis les Sources
 
-Dans `main.js`, modifiez les paramètres de `BrowserWindow` :
+```bash
+# Installation des dépendances
+npm install
+
+# Lancement en mode développement
+npm run dev
+
+# Build pour production
+npm run build
+
+# Build spécifique Windows
+npm run build-win
+```
+
+---
+
+## 📖 Utilisation
+
+### 🚀 Premier Lancement
+
+1. **Lancez l'application** - Double-cliquez sur l'exécutable
+2. **Position Automatique** - L'app se positionne automatiquement à droite
+3. **Interface Transparente** - L'interface se fond dans votre bureau
+
+### 🎵 Utilisation des Sons
+
+```
+🔍 Recherche:
+├── Tapez dans la barre de recherche
+├── Résultats en temps réel
+└── Cliquez sur ▶️ pour jouer
+
+🎲 Sons Aléatoires:
+├── Cliquez sur "Random Sounds"
+└── Découvrez de nouveaux sons
+
+📈 Tendances:
+├── Cliquez sur "Trending Sounds"
+└── Écoutez les sons populaires
+```
+
+### ⌨️ Raccourcis Clavier
+
+| Raccourci | Action |
+|-----------|--------|
+| `Ctrl + F` | Focus sur la recherche |
+| `Enter` | Jouer le premier son |
+| `Esc` | Effacer la recherche |
+| `Ctrl + R` | Sons aléatoires |
+| `Ctrl + T` | Sons tendances |
+
+---
+
+## 🏗️ Architecture Technique
+
+### 📦 Stack Technologique
+
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Backend:** Node.js, Express.js
+- **Desktop:** Electron 28.0.0
+- **Build:** Electron-Builder, NSIS
+- **Recherche:** Fuse.js
+- **HTTP:** CORS, Fetch API
+
+### 🔄 API Reverse MyInstants
+
 ```javascript
-width: 320,              // Largeur
-height: height - 100,    // Hauteur
-x: width - 340,          // Position X (droite par défaut)
-y: 50,                   // Position Y
+// Scraping en temps réel
+app.get('/api/search/:query', async (req, res) => {
+  const response = await fetch(`https://www.myinstants.com/search/?name=${query}`);
+  const html = await response.text();
+  // Parsing intelligent avec regex
+  const sounds = extractSoundsFromHTML(html);
+  res.json(sounds);
+});
 ```
 
-## 🐛 Dépannage
+---
 
-### L'application ne se lance pas
-- Vérifiez que Node.js est installé : `node --version`
-- Réinstallez les dépendances : `npm install`
+## 🔮 Roadmap - Prochaines Fonctionnalités
 
-### Pas de sons trouvés
-- Vérifiez votre connexion Internet
-- Testez l'API : http://localhost:3001/api/status
-- MyInstants pourrait être temporairement indisponible
+### 🤖 IA de Détection Contextuelle (v2.0)
 
-### Sons qui ne se lancent pas
-- Vérifiez les permissions audio de votre navigateur
-- Certains sons peuvent avoir des restrictions de CORS
-- Le cache peut être plein (redémarrez l'application)
+La prochaine mise à jour majeure introduira une révolution dans l'expérience soundboard :
 
-## 🔒 Conformité et limitations
+#### 👁️ **Détection d'Objets et Scènes en Temps Réel**
 
-- **Usage éducatif** : Cette application est créée à des fins d'apprentissage
-- **Respect du site** : L'API fait des requêtes raisonnables pour ne pas surcharger MyInstants
-- **Cache temporaire** : Les sons ne sont pas stockés de façon permanente
-- **Pas de redistribution** : Les sons appartiennent à leurs créateurs respectifs
+```
+🎯 Vision par Ordinateur:
+├── 📷 Capture d'écran automatique
+├── 🧠 Analyse IA des objets présents
+├── 🎮 Détection du contexte (jeu, travail, détente)
+└── 🎵 Suggestions de sons contextuals
 
-## 🆕 Améliorations futures
+🎪 Scénarios d'Usage:
+├── 🎮 Gaming: Sons d'action détectés automatiquement
+├── 💼 Travail: Sons d'ambiance office appropriés
+├── 🎬 Streaming: Réactions adaptées au contenu
+└── 🎉 Social: Sons d'interaction selon l'activité
+```
 
-- [ ] Ai direct soundboard
+#### 🚀 **Fonctionnalités IA Prévues**
 
-## 📝 Licence
+- **Auto-Suggestion** - Sons proposés selon le contexte détecté
+- **Apprentissage** - L'IA apprend vos préférences
+- **Reconnaissance Visuelle** - Détection d'objets, personnages, UI
+- **Mode Intelligent** - Activation automatique des sons appropriés
+- **Filtres Contextuels** - Catégorisation automatique par situation
 
-MIT License - Voir le fichier LICENSE pour plus de détails.
+#### 🛠️ **Technologies IA Intégrées**
+
+- **TensorFlow.js** - Modèles de vision par ordinateur
+- **YOLO Detection** - Reconnaissance d'objets en temps réel
+- **Scene Classification** - Analyse du contexte environnemental
+- **Machine Learning** - Apprentissage des préférences utilisateur
+
+---
+
+## 🐛 Résolution de Problèmes
+
+### ❌ Problèmes Courants
+
+| Problème | Solution |
+|----------|----------|
+| App ne se lance pas | Vérifiez les permissions d'exécution |
+| Sons ne se chargent pas | Vérifiez votre connexion internet |
+| Interface transparente invisible | Ajustez les paramètres de transparence |
+| Build échoue | Fermez VS Code avant de builder |
+
+### 🔧 Debug Mode
+
+```bash
+# Lancement avec console de debug
+npm run dev
+
+# Logs détaillés
+DEBUG=* npm start
+```
+
+---
+
+## 🤝 Contribution
+
+### 📋 Guidelines
+
+1. **Fork** le repository
+2. **Créez** une branche feature (`git checkout -b feature/amazing-feature`)
+3. **Commitez** vos changements (`git commit -m 'Add amazing feature'`)
+4. **Push** vers la branche (`git push origin feature/amazing-feature`)
+5. **Ouvrez** une Pull Request
+
+### 🧪 Tests
+
+```bash
+# Tests unitaires
+npm test
+
+# Tests d'intégration
+npm run test:integration
+
+# Linting
+npm run lint
+```
+
+---
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+## 👥 Équipe
+
+<div align="center">
+
+**Développé avec ❤️ par l'équipe Araken**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=social&logo=github)](https://github.com/votre-username)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-blue?style=social&logo=twitter)](https://twitter.com/votre-username)
+
+</div>
+
+---
+
+## 🙏 Remerciements
+
+- [MyInstants.com](https://myinstants.com) - Pour leur plateforme de sons
+- [Electron](https://electronjs.org) - Framework desktop
+- [Fuse.js](https://fusejs.io) - Moteur de recherche flou
+- Communauté Open Source
+
+---
+
+<div align="center">
+
+**⭐ N'oubliez pas de donner une étoile si ce projet vous plaît ! ⭐**
+
+*Transformez votre expérience audio dès aujourd'hui*
+
+</div>
